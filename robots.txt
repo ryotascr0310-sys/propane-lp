@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ryotascr0310-sys.github.io/propane-lp/sitemap.xml

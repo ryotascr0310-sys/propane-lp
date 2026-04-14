@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロパンガスのお役立ちコラム | スマートチョイス</title>
+  <meta name="description" content="プロパンガスの料金の仕組み、節約方法、ガス会社の切り替えガイドなど、ガス代の見直しに役立つ情報をお届けします。">
+  <meta property="og:title" content="プロパンガスのお役立ちコラム | スマートチョイス">
+  <meta property="og:description" content="プロパンガスの料金の仕組み、節約方法、ガス会社の切り替えガイドなど、ガス代の見直しに役立つ情報をお届けします。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="スマートチョイス">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="プロパンガスのお役立ちコラム | スマートチョイス">
+  <meta name="twitter:description" content="プロパンガスの料金の仕組み、節約方法、ガス会社の切り替えガイドなど、ガス代の見直しに役立つ情報をお届けします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Hiragino Sans', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'メイリオ', sans-serif;
+      color: #1e293b;
+      background: #fff;
+      line-height: 1.8;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== Header ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid #f1f5f9;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .header__logo-main {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #f97316;
+      letter-spacing: 0.02em;
+    }
+
+    .header__logo-sep {
+      color: #cbd5e1;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+
+    .header__logo-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #64748b;
+      letter-spacing: 0.04em;
+    }
+
+    .header__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f97316;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 50px;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+
+    .header__cta:hover {
+      background: #ea580c;
+      transform: translateY(-1px);
+    }
+
+    /* ===== Hero ===== */
+    .hero-blog {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%);
+      padding: 72px 0 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-blog::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-blog::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-blog__title {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #1e293b;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+      position: relative;
+    }
+
+    .hero-blog__title span {
+      color: #f97316;
+    }
+
+    .hero-blog__subtitle {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 400;
+      position: relative;
+    }
+
+    /* ===== Breadcrumb ===== */
+    .breadcrumb {
+      padding: 16px 0;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .breadcrumb a {
+      color: #64748b;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: #f97316;
+    }
+
+    .breadcrumb__sep {
+      margin: 0 8px;
+    }
+
+    /* ===== Article Grid ===== */
+    .articles {
+      padding: 0 0 64px;
+    }
+
+    .articles__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    /* ===== Card ===== */
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #f1f5f9;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(249, 115, 22, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .card__body {
+      padding: 28px 28px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .card__category {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #f97316;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      padding: 3px 12px;
+      border-radius: 50px;
+      letter-spacing: 0.03em;
+    }
+
+    .card__date {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    .card__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card__title a {
+      transition: color 0.2s;
+    }
+
+    .card__title a:hover {
+      color: #f97316;
+    }
+
+    .card__desc {
+      font-size: 0.88rem;
+      color: #64748b;
+      line-height: 1.75;
+      margin-bottom: 18px;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #f97316;
+      transition: gap 0.2s, color 0.2s;
+      margin-top: auto;
+    }
+
+    .card__link:hover {
+      color: #ea580c;
+      gap: 8px;
+    }
+
+    .card__link-arrow {
+      transition: transform 0.2s;
+    }
+
+    .card__link:hover .card__link-arrow {
+      transform: translateX(3px);
+    }
+
+    /* ===== Bottom CTA ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    .cta-section__icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .cta-section__title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #1e293b;
+      margin-bottom: 12px;
+    }
+
+    .cta-section__text {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 28px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-section__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #f97316;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 50px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(249, 115, 22, 0.3);
+    }
+
+    .cta-section__btn:hover {
+      background: #ea580c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(249, 115, 22, 0.4);
+    }
+
+    .cta-section__note {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 14px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: #1e293b;
+      color: #94a3b8;
+      padding: 40px 0 24px;
+    }
+
+    .footer__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer__logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #f97316;
+    }
+
+    .footer__sub {
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .footer__nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer__link {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      transition: color 0.2s;
+    }
+
+    .footer__link:hover {
+      color: #f97316;
+    }
+
+    .footer__copyright {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #64748b;
+      border-top: 1px solid #334155;
+      padding-top: 20px;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 768px) {
+      .header__inner {
+        height: 56px;
+      }
+
+      .header__logo-main {
+        font-size: 1.1rem;
+      }
+
+      .header__logo-sep,
+      .header__logo-label {
+        display: none;
+      }
+
+      .header__cta {
+        font-size: 0.78rem;
+        padding: 8px 16px;
+      }
+
+      .hero-blog {
+        padding: 48px 0 40px;
+      }
+
+      .hero-blog__title {
+        font-size: 1.5rem;
+      }
+
+      .hero-blog__subtitle {
+        font-size: 0.9rem;
+        padding: 0 8px;
+      }
+
+      .articles__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .card__body {
+        padding: 22px 20px 20px;
+      }
+
+      .card__title {
+        font-size: 1rem;
+      }
+
+      .cta-section {
+        padding: 48px 0;
+      }
+
+      .cta-section__title {
+        font-size: 1.25rem;
+      }
+
+      .cta-section__btn {
+        font-size: 0.95rem;
+        padding: 14px 32px;
+      }
+
+      .footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-blog__title {
+        font-size: 1.3rem;
+      }
+
+      .card__meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner container">
+      <a href="../index.html" class="header__logo">
+        <span class="header__logo-main">スマートチョイス</span>
+        <span class="header__logo-sep">|</span>
+        <span class="header__logo-label">コラム</span>
+      </a>
+      <a href="../index.html#wizard" class="header__cta">無料診断はこちら</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero-blog">
+      <div class="container">
+        <h1 class="hero-blog__title"><span>スマートチョイス</span> コラム</h1>
+        <p class="hero-blog__subtitle">プロパンガスの料金・節約に関するお役立ち情報</p>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <div class="container">
+        <a href="../index.html">ホーム</a>
+        <span class="breadcrumb__sep">&gt;</span>
+        <span>コラム一覧</span>
+      </div>
+    </nav>
+
+    <!-- Articles -->
+    <section class="articles">
+      <div class="container">
+        <div class="articles__grid">
+
+          <!-- Article 1 -->
+          <article class="card">
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__category">オーナー向け</span>
+                <time class="card__date" datetime="2026-04-14">2026.04.14</time>
+              </div>
+              <h2 class="card__title">
+                <a href="apartment-owner-gas-cost.html">アパートオーナー必見！プロパンガス会社の見直しで物件の魅力を高める方法</a>
+              </h2>
+              <p class="card__desc">アパート・マンションオーナー様がガス会社を見直すメリットと手順を解説。入居者満足度の向上や空室対策にも効果的です。</p>
+              <a href="apartment-owner-gas-cost.html" class="card__link">
+                続きを読む <span class="card__link-arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="card">
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__category">節約術</span>
+                <time class="card__date" datetime="2026-04-14">2026.04.14</time>
+              </div>
+              <h2 class="card__title">
+                <a href="winter-gas-bill-saving.html">冬のガス代が高すぎる！原因と効果的な節約方法7選</a>
+              </h2>
+              <p class="card__desc">冬場のガス代が急に高くなる原因を解説。すぐに実践できる節約方法7つと、最も効果的な根本解決策をご紹介します。</p>
+              <a href="winter-gas-bill-saving.html" class="card__link">
+                続きを読む <span class="card__link-arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="card">
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__category">料金の仕組み</span>
+                <time class="card__date" datetime="2026-04-14">2026.04.14</time>
+              </div>
+              <h2 class="card__title">
+                <a href="propane-gas-fair-price.html">【2026年版】プロパンガスの適正価格は？都道府県別の料金相場と確認方法</a>
+              </h2>
+              <p class="card__desc">あなたのプロパンガス料金は適正？都道府県別の料金相場表と、検針票から従量単価を確認する方法を解説します。</p>
+              <a href="propane-gas-fair-price.html" class="card__link">
+                続きを読む <span class="card__link-arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="card">
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__category">切替ガイド</span>
+                <time class="card__date" datetime="2026-04-14">2026.04.14</time>
+              </div>
+              <h2 class="card__title">
+                <a href="gas-company-switching-guide.html">ガス会社の乗り換え完全ガイド｜手順・費用・注意点をわかりやすく解説</a>
+              </h2>
+              <p class="card__desc">ガス会社の乗り換えは意外とカンタン。費用0円で完了する手順や、知っておくべき注意点をわかりやすくまとめました。</p>
+              <a href="gas-company-switching-guide.html" class="card__link">
+                続きを読む <span class="card__link-arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="card">
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="card__category">料金の仕組み</span>
+                <time class="card__date" datetime="2026-04-14">2026.04.14</time>
+              </div>
+              <h2 class="card__title">
+                <a href="propane-gas-expensive-reasons.html">プロパンガスはなぜ高い？料金が高くなる5つの理由と今すぐできる対策</a>
+              </h2>
+              <p class="card__desc">プロパンガスの料金が高い5つの理由をわかりやすく解説。同じガス会社でも家ごとに単価が違うカラクリと、効果的な対策を紹介します。</p>
+              <a href="propane-gas-expensive-reasons.html" class="card__link">
+                続きを読む <span class="card__link-arrow">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <p class="cta-section__icon" aria-hidden="true">&#x1F50D;</p>
+        <h2 class="cta-section__title">ガス代が気になったら、まず無料診断</h2>
+        <p class="cta-section__text">今のガス料金が適正かどうか、60秒でわかります。<br>しつこい営業は一切ありません。</p>
+        <a href="../index.html#wizard" class="cta-section__btn">無料診断してみる &rarr;</a>
+        <p class="cta-section__note">※ 費用は一切かかりません</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__logo">スマートチョイス</p>
+          <p class="footer__sub">LPガス切替の総合代理店 | 株式会社nero</p>
+        </div>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <a href="../index.html" class="footer__link">トップページ</a>
+          <a href="../index.html#privacy" class="footer__link">プライバシーポリシー</a>
+        </nav>
+      </div>
+      <p class="footer__copyright">&copy; 2026 スマートチョイス（株式会社nero）All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
