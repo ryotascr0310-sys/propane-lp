@@ -138,75 +138,29 @@
   // Wizard (Diagnostic Tool)
   // ========================================
   function initWizard() {
-    var companyInput = document.getElementById('companyInput');
-    var meterSlip = document.getElementById('meterSlip');
-    var nextBtn1 = document.getElementById('wizardNext1');
-    var step1 = document.getElementById('wizardStep1');
-    var step2 = document.getElementById('wizardStep2');
-    var resultDiv = document.getElementById('wizardResult');
     var calcBtn = document.getElementById('wizardCalcBtn');
-    var progressBar = document.getElementById('wizardProgressBar');
+    var resultDiv = document.getElementById('wizardResult');
 
-    if (!companyInput) return;
+    if (!calcBtn) return;
 
-    var selectedCompany = '';
-
-    // Show meter slip and next button only after input is confirmed (Enter key or blur)
-    function confirmCompany() {
-      var value = companyInput.value.trim();
-      if (value.length >= 1) {
-        selectedCompany = value;
-        companyInput.classList.add('has-value');
-        renderMeterSlip(value, meterSlip);
-        meterSlip.style.display = 'block';
-        nextBtn1.style.display = 'block';
-      } else {
-        selectedCompany = '';
-        companyInput.classList.remove('has-value');
-        meterSlip.style.display = 'none';
-        nextBtn1.style.display = 'none';
-      }
-    }
-
-    companyInput.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        companyInput.blur();
-      }
-    });
-
-    companyInput.addEventListener('blur', function () {
-      confirmCompany();
-    });
-
-    // --- Smooth Step Transitions ---
-    // Show all questions immediately (no accordion - all visible)
-    var q1 = document.getElementById('wizardQ1');
-    var q2 = document.getElementById('wizardQ2');
-    var q3 = document.getElementById('wizardQ3');
-
-    // Step 2 is always visible (no hiding)
-
-    // Calculate results
+    // Calculate results when button is clicked
     calcBtn.addEventListener('click', function () {
       var bill = parseInt(document.getElementById('wizardBill').value) || 0;
-      var usedBill = bill;
 
-      if (usedBill <= 0) {
+      if (bill <= 0) {
         alert('ガス代を入力してください');
         return;
       }
 
       var reductionRate = 0.4;
-      var afterBill = Math.round(usedBill * (1 - reductionRate));
-      var annualSavings = (usedBill - afterBill) * 12;
+      var afterBill = Math.round(bill * (1 - reductionRate));
+      var annualSavings = (bill - afterBill) * 12;
 
       // Show result
       resultDiv.style.display = 'block';
-      resultDiv.classList.add('is-celebrating');
 
       document.getElementById('resultPercent').textContent = Math.round(reductionRate * 100);
-      document.getElementById('resultBefore').textContent = '¥' + usedBill.toLocaleString();
+      document.getElementById('resultBefore').textContent = '¥' + bill.toLocaleString();
       document.getElementById('resultAfter').textContent = '¥' + afterBill.toLocaleString();
 
       // Animate annual savings counter
@@ -218,6 +172,13 @@
       setTimeout(function () {
         launchConfetti();
       }, 300);
+
+      // Scroll to result
+      setTimeout(function () {
+        var headerHeight = document.getElementById('header').offsetHeight;
+        var targetPos = resultDiv.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+      }, 100);
     });
   }
 

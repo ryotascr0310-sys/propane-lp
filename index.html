@@ -98,36 +98,34 @@
         </div>
 
         <div class="wizard__card reveal" id="wizardCard">
-          <!-- Step 1: Company Selection -->
-          <div class="wizard__step" id="wizardStep1">
-            <h3 class="wizard__step-title">現在ご契約のガス会社を教えてください</h3>
+          <!-- All questions in one view -->
+          <div class="wizard__question">
+            <h3 class="wizard__step-title">① 現在ご契約のガス会社を教えてください</h3>
             <div class="wizard__select-wrap">
               <input type="text" id="companyInput" class="wizard__company-input" placeholder="例: ○○ガス、ニチガス" autocomplete="off" aria-label="ガス会社名を入力">
             </div>
-            <div class="wizard__meter" id="meterSlip" style="display:none;"></div>
           </div>
 
-          <!-- Step 2: Usage Questions (always visible after step 1) -->
-          <div class="wizard__step" id="wizardStep2">
-            <div class="wizard__question" id="wizardQ1">
-              <h3 class="wizard__step-title">どちらでガスをお使いですか？（複数選択可）</h3>
-              <div class="wizard__checkbox-group">
-                <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="台所"><span>お台所</span></label>
-                <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="風呂"><span>お風呂・シャワー</span></label>
-                <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="給湯"><span>給湯</span></label>
-                <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="暖房"><span>暖房</span></label>
-              </div>
+          <div class="wizard__question">
+            <h3 class="wizard__step-title">② どちらでガスをお使いですか？（複数選択可）</h3>
+            <div class="wizard__checkbox-group">
+              <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="台所"><span>お台所</span></label>
+              <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="風呂"><span>お風呂・シャワー</span></label>
+              <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="給湯"><span>給湯</span></label>
+              <label class="wizard__checkbox"><input type="checkbox" name="gasUse" value="暖房"><span>暖房</span></label>
             </div>
-            <div class="wizard__question" id="wizardQ2">
-              <h3 class="wizard__step-title">直近1か月のガス代はいくらでしたか？</h3>
-              <div class="wizard__input-wrap">
-                <span class="wizard__input-prefix">¥</span>
-                <input type="number" id="wizardBill" class="wizard__input" placeholder="例: 8000" min="0">
-                <span class="wizard__input-suffix">円/月</span>
-              </div>
-            </div>
-            <button class="btn btn--primary btn--large wizard__next-btn" id="wizardCalcBtn">診断結果を見る</button>
           </div>
+
+          <div class="wizard__question">
+            <h3 class="wizard__step-title">③ 直近1か月のガス代はいくらでしたか？</h3>
+            <div class="wizard__input-wrap">
+              <span class="wizard__input-prefix">¥</span>
+              <input type="number" id="wizardBill" class="wizard__input" placeholder="例: 8000" min="0">
+              <span class="wizard__input-suffix">円/月</span>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--large wizard__next-btn" id="wizardCalcBtn" style="width:100%; margin-top:16px;">診断結果を見る</button>
 
           <!-- Result -->
           <div class="wizard__step wizard__result" id="wizardResult" style="display:none;">
