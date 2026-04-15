@@ -209,42 +209,32 @@
         <div class="why__chart-section reveal">
           <h3 class="why__part-title">従量単価の推移（全国平均）</h3>
           <div class="why__chart" id="priceChart">
-            <div class="why__chart-area">
-              <div class="why__chart-bars">
-                <div class="why__chart-line-inner">
-                  <span class="why__chart-line-label">適正単価 ¥350</span>
-                </div>
-                <div class="why__chart-col" data-year="2019">
-                  <span class="why__chart-price">¥365</span>
-                  <div class="why__chart-bar" data-height="22"></div>
-                  <span class="why__chart-year">2019</span>
-                </div>
-                <div class="why__chart-col" data-year="2020">
-                  <span class="why__chart-price">¥345</span>
-                  <div class="why__chart-bar" data-height="15"></div>
-                  <span class="why__chart-year">2020</span>
-                </div>
-                <div class="why__chart-col" data-year="2021">
-                  <span class="why__chart-price">¥415</span>
-                  <div class="why__chart-bar" data-height="38"></div>
-                  <span class="why__chart-year">2021</span>
-                </div>
-                <div class="why__chart-col" data-year="2022">
-                  <span class="why__chart-price">¥475</span>
-                  <div class="why__chart-bar" data-height="58"></div>
-                  <span class="why__chart-year">2022</span>
-                </div>
-                <div class="why__chart-col" data-year="2023">
-                  <span class="why__chart-price">¥510</span>
-                  <div class="why__chart-bar" data-height="70"></div>
-                  <span class="why__chart-year">2023</span>
-                </div>
-                <div class="why__chart-col" data-year="2024">
-                  <span class="why__chart-price">¥530</span>
-                  <div class="why__chart-bar why__chart-bar--danger" data-height="77"></div>
-                  <span class="why__chart-year">2024</span>
-                </div>
+            <!-- 価格ラベル行 -->
+            <div class="chart-prices">
+              <span class="chart-prices__item">¥365</span>
+              <span class="chart-prices__item">¥345</span>
+              <span class="chart-prices__item">¥415</span>
+              <span class="chart-prices__item">¥475</span>
+              <span class="chart-prices__item">¥510</span>
+              <span class="chart-prices__item chart-prices__item--danger">¥530</span>
+            </div>
+            <!-- バーエリア（ラインと同じ座標系） -->
+            <div class="chart-bar-area">
+              <div class="chart-line" style="bottom:16.7%">
+                <span class="chart-line__label">適正単価 ¥350</span>
               </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar" data-height="22"></div>
+                <div class="chart-bar" data-height="15"></div>
+                <div class="chart-bar" data-height="38"></div>
+                <div class="chart-bar" data-height="58"></div>
+                <div class="chart-bar" data-height="70"></div>
+                <div class="chart-bar chart-bar--danger" data-height="77"></div>
+              </div>
+            </div>
+            <!-- 年ラベル行 -->
+            <div class="chart-years">
+              <span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span>
             </div>
           </div>
           <p class="why__chart-caption">※ 出典：石油情報センター</p>

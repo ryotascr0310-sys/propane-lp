@@ -388,8 +388,8 @@
     observer.observe(chart);
 
     function animateBars() {
-      var bars = chart.querySelectorAll('.why__chart-bar');
-      var prices = chart.querySelectorAll('.why__chart-price');
+      var bars = chart.querySelectorAll('.chart-bar');
+      var prices = chart.querySelectorAll('.chart-prices__item');
       bars.forEach(function (bar, i) {
         var targetHeight = bar.getAttribute('data-height');
         setTimeout(function () {

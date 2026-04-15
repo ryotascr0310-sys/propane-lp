@@ -1167,33 +1167,54 @@ input, select, textarea {
 }
 
 .why__chart {
-  max-width: 560px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
-.why__chart-area {
+/* 価格ラベル行 */
+.chart-prices {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+}
+
+.chart-prices__item {
+  flex: 1;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--orange-dark);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.chart-prices__item.is-visible {
+  opacity: 1;
+}
+
+.chart-prices__item--danger {
+  color: var(--red);
+}
+
+/* バーエリア - ラインとバーが完全に同じ座標系 */
+.chart-bar-area {
   position: relative;
-  padding: 28px 0 40px;
+  height: 200px;
 }
 
-.why__chart-line {
-  display: none;
-}
-
-/* Line element inside bars container */
-.why__chart-line-inner {
+/* 適正単価ライン */
+.chart-line {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 16.7%;
   border-top: 2px dashed #22c55e;
   z-index: 2;
   pointer-events: none;
 }
 
-.why__chart-line-label {
+.chart-line__label {
   position: absolute;
-  top: -24px;
+  top: -22px;
   right: 0;
   font-size: 0.72rem;
   font-weight: 800;
@@ -1205,58 +1226,43 @@ input, select, textarea {
   white-space: nowrap;
 }
 
-.why__chart-bars {
+/* バーグループ */
+.chart-bar-group {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  height: 240px;
-  gap: 8px;
-  position: relative;
-}
-
-
-.why__chart-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
   height: 100%;
-  gap: 6px;
+  gap: 12px;
 }
 
-.why__chart-price {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--orange-dark);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  white-space: nowrap;
-}
-
-.why__chart-price.is-visible {
-  opacity: 1;
-}
-
-.why__chart-bar {
-  width: 100%;
-  max-width: 48px;
+/* 個別バー */
+.chart-bar {
+  flex: 1;
+  max-width: 52px;
   height: 0%;
   background: linear-gradient(180deg, var(--orange), #fdba74);
   border-radius: 8px 8px 0 0;
   transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.why__chart-bar--danger {
+.chart-bar--danger {
   background: linear-gradient(180deg, var(--red), var(--orange-dark));
   box-shadow: 0 -4px 16px rgba(234, 88, 12, 0.3);
 }
 
-.why__chart-year {
+/* 年ラベル行 */
+.chart-years {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.chart-years span {
+  flex: 1;
+  text-align: center;
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--gray-500);
-  margin-top: 4px;
 }
 
 .why__chart-caption {
