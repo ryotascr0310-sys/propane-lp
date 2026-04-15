@@ -140,8 +140,31 @@
   function initWizard() {
     var calcBtn = document.getElementById('wizardCalcBtn');
     var resultDiv = document.getElementById('wizardResult');
+    var companyInput = document.getElementById('companyInput');
+    var meterSlip = document.getElementById('meterSlip');
 
     if (!calcBtn) return;
+
+    // Show meter slip when company name is entered (on blur or Enter)
+    if (companyInput && meterSlip) {
+      function showMeterSlip() {
+        var value = companyInput.value.trim();
+        if (value.length >= 1) {
+          renderMeterSlip(value, meterSlip);
+          meterSlip.style.display = 'block';
+        } else {
+          meterSlip.style.display = 'none';
+        }
+      }
+
+      companyInput.addEventListener('blur', showMeterSlip);
+      companyInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          companyInput.blur();
+        }
+      });
+    }
 
     // Calculate results when button is clicked
     calcBtn.addEventListener('click', function () {
