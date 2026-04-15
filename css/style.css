@@ -1173,37 +1173,39 @@ input, select, textarea {
 
 .why__chart-area {
   position: relative;
-  padding-top: 20px;
+  padding: 28px 0 40px;
 }
 
 .why__chart-line {
   position: absolute;
-  top: 52%;
+  bottom: calc(40px + 240px * 0.46);
   left: 0;
   right: 0;
-  border-top: 2px dashed var(--green);
+  border-top: 2px dashed #22c55e;
   z-index: 2;
+  pointer-events: none;
 }
 
 .why__chart-line-label {
   position: absolute;
-  top: -22px;
+  top: -24px;
   right: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--green-dark);
-  background: rgba(255,255,255,0.9);
-  padding: 2px 8px;
-  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 2px 10px;
+  border-radius: 6px;
+  border: 1px solid #bbf7d0;
+  white-space: nowrap;
 }
 
 .why__chart-bars {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-  height: 220px;
+  justify-content: space-around;
+  height: 240px;
   gap: 8px;
-  padding-bottom: 32px;
 }
 
 .why__chart-col {
@@ -1211,16 +1213,18 @@ input, select, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  height: 100%;
   gap: 6px;
-  position: relative;
 }
 
 .why__chart-price {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--gray-600);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--orange-dark);
   opacity: 0;
   transition: opacity 0.5s ease;
+  white-space: nowrap;
 }
 
 .why__chart-price.is-visible {
@@ -1230,22 +1234,22 @@ input, select, textarea {
 .why__chart-bar {
   width: 100%;
   max-width: 48px;
-  height: 0;
-  background: linear-gradient(180deg, var(--orange), var(--orange-dark));
-  border-radius: 6px 6px 0 0;
+  height: 0%;
+  background: linear-gradient(180deg, var(--orange), #fdba74);
+  border-radius: 8px 8px 0 0;
   transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .why__chart-bar--danger {
-  background: linear-gradient(180deg, var(--red), var(--red-dark));
+  background: linear-gradient(180deg, var(--red), var(--orange-dark));
+  box-shadow: 0 -4px 16px rgba(234, 88, 12, 0.3);
 }
 
 .why__chart-year {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--gray-500);
-  position: absolute;
-  bottom: -24px;
+  margin-top: 4px;
 }
 
 .why__chart-caption {
