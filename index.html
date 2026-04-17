@@ -16,7 +16,7 @@
   <meta name="twitter:description" content="LPガスの料金を最大50%削減。累計13万件の実績。1年間の料金保障・料金交渉サービス付き。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J89MQKNC7K"></script>
@@ -57,45 +57,129 @@
 
   <main>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
+    <!-- Hero Premium Section -->
+    <section class="hero-premium" id="hero">
+      <div class="hero-premium__bg"></div>
+      <div class="hero-premium__pattern"></div>
       <div class="container">
-        <div class="hero__content">
-          <div class="hero__counter-badge">
-            <span class="hero__counter-icon">&#x1F525;</span>
-            <span>累計</span>
-            <span class="hero__counter-number" id="heroCounter" data-target="130000">0</span>
-            <span>件+の切替実績</span>
-          </div>
-          <h1 class="hero__title">
-            あなたのガス代、<br>
-            <span class="hero__title-gradient">最大50%</span>安くなります
+        <div class="hero-premium__content">
+          <div class="hero-premium__gold-line"></div>
+          <p class="hero-premium__label">IMPORTANT NOTICE</p>
+          <h1 class="hero-premium__title">
+            ガス料金の値上げにあたり、<br>
+            ご確認いただきたいこと
           </h1>
-          <p class="hero__subtitle">同じ使用量でも、ガス会社によって料金は2倍近く変わります。<br class="hide-sp">スマートチョイスなら、面倒な手続き不要・初期費用0円で切り替えできます。</p>
-          <div class="hero__badges">
-            <div class="hero__badge">
-              <span class="hero__badge-icon">&#x1F4B0;</span>
-              <span>最大50%削減</span>
-            </div>
-            <div class="hero__badge">
-              <span class="hero__badge-icon">&#x1F4CB;</span>
-              <span>手続き不要</span>
-            </div>
-            <div class="hero__badge">
-              <span class="hero__badge-icon">&#x1F6E1;&#xFE0F;</span>
-              <span>1年間料金保障</span>
-            </div>
+          <div class="hero-premium__divider">
+            <span class="hero-premium__diamond">&#x25C6;</span>
           </div>
-          <a href="#wizard" class="btn btn--hero hero__cta">
-            <span class="btn__shimmer"></span>
-            60秒で節約額を診断する（無料）
-          </a>
-          <p class="hero__note">&#x1F6E1;&#xFE0F; しつこい営業は一切行いません</p>
+          <p class="hero-premium__desc">
+            昨今の資源価格高騰を背景に、都市ガス・プロパンガスの<br class="hide-sp">
+            料金改定が相次いでいます。<br>
+            料金の適正性についてご自身でご確認いただくことをお勧めします。
+          </p>
+          <div class="hero-premium__gold-line"></div>
         </div>
       </div>
-      <div class="hero__scroll" aria-hidden="true">
-        <span class="hero__scroll-dot"></span>
+      <div class="hero-premium__scroll">
+        <span>SCROLL</span>
+        <div class="hero-premium__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Timing Premium Section -->
+    <section class="timing-premium" id="timing">
+      <div class="container">
+        <h2 class="timing-premium__title">
+          <span class="timing-premium__label">WHY NOW</span>
+          なぜ「今」がチャンスなのか
+        </h2>
+
+        <div class="timing-premium__timeline">
+          <div class="timing-premium__line"></div>
+
+          <div class="timing-premium__item reveal">
+            <div class="timing-premium__num">01</div>
+            <div class="timing-premium__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="32" cy="10" rx="16" ry="6" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <path d="M16 10 v40 a16 6 0 0 0 32 0 v-40" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <ellipse cx="32" cy="50" rx="16" ry="6" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <line x1="16" y1="26" x2="48" y2="26" stroke="#0C1929" stroke-width="1.5" opacity="0.3"/>
+                <line x1="16" y1="38" x2="48" y2="38" stroke="#0C1929" stroke-width="1.5" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="timing-premium__text">
+              <h3>原油仕入れの仕組み</h3>
+              <p>LPガスの原料は海外からの輸入が大半。為替・原油価格の影響を受けやすい構造です。</p>
+            </div>
+          </div>
+
+          <div class="timing-premium__item reveal reveal-delay-1">
+            <div class="timing-premium__num">02</div>
+            <div class="timing-premium__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="24" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <ellipse cx="32" cy="32" rx="10" ry="24" stroke="#D4A853" stroke-width="1.5" fill="none"/>
+                <line x1="8" y1="22" x2="56" y2="22" stroke="#0C1929" stroke-width="1" opacity="0.3"/>
+                <line x1="8" y1="42" x2="56" y2="42" stroke="#0C1929" stroke-width="1" opacity="0.3"/>
+                <line x1="32" y1="8" x2="32" y2="56" stroke="#0C1929" stroke-width="1" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="timing-premium__text">
+              <h3>今の情勢</h3>
+              <p>エネルギー価格は世界的に上昇トレンド。今後さらなる値上げの可能性が高い状況です。</p>
+            </div>
+          </div>
+
+          <div class="timing-premium__item reveal reveal-delay-2">
+            <div class="timing-premium__num">03</div>
+            <div class="timing-premium__icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="40" width="10" height="16" rx="2" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <rect x="22" y="30" width="10" height="26" rx="2" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <rect x="36" y="20" width="10" height="36" rx="2" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <rect x="50" y="10" width="10" height="46" rx="2" stroke="#D4A853" stroke-width="2" fill="none"/>
+                <path d="M10 36 L26 26 L40 16 L56 8" stroke="#0C1929" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+                <circle cx="56" cy="8" r="3" fill="#D4A853"/>
+              </svg>
+            </div>
+            <div class="timing-premium__text">
+              <h3>必然の値上げ</h3>
+              <p>長期間同じ会社を使い続けると、知らない間に単価が上がっているケースが非常に多いです。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timing-premium__compare reveal">
+          <div class="timing-premium__compare-panel timing-premium__compare--danger">
+            <div class="timing-premium__compare-accent"></div>
+            <div class="timing-premium__compare-emoji">&#x1F630;</div>
+            <h4>5年以上同じ会社</h4>
+            <p>単価が50%以上高くなっている可能性大</p>
+          </div>
+          <div class="timing-premium__compare-vs">
+            <span>VS</span>
+          </div>
+          <div class="timing-premium__compare-panel timing-premium__compare--safe">
+            <div class="timing-premium__compare-accent"></div>
+            <div class="timing-premium__compare-emoji">&#x1F60A;</div>
+            <h4>切替1〜2年以内</h4>
+            <p>適正価格でガス代を大幅に抑えられる</p>
+          </div>
+        </div>
+
+        <div class="timing-premium__conclusion">
+          <div class="timing-premium__conclusion-line"></div>
+          <p>今切り替えるのが最も賢い選択です</p>
+          <div class="timing-premium__conclusion-line"></div>
+        </div>
+
+        <div style="text-align:center; margin-top:40px;">
+          <a href="#wizard" class="btn btn--hero timing-premium__cta">
+            <span class="btn__shimmer"></span>
+            無料でガス料金をチェックする &#x2192;
+          </a>
+        </div>
       </div>
     </section>
 
@@ -473,48 +557,6 @@
               <span class="facts__label">初期費用・切替費用</span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Timing Section -->
-    <section class="timing" id="timing">
-      <div class="container">
-        <h2 class="section-title reveal">なぜ<span class="text-gradient">「今」</span>がチャンスなのか</h2>
-        <div class="timing__flow reveal">
-          <div class="timing__step-card glass-card">
-            <div class="timing__step-num">1</div>
-            <h4>原油仕入れの仕組み</h4>
-            <p>LPガスの原料は海外からの輸入が大半。為替・原油価格の影響を受けやすい構造です。</p>
-          </div>
-          <div class="timing__arrow">&#x2192;</div>
-          <div class="timing__step-card glass-card">
-            <div class="timing__step-num">2</div>
-            <h4>今の情勢</h4>
-            <p>エネルギー価格は世界的に上昇トレンド。今後さらなる値上げの可能性が高い状況です。</p>
-          </div>
-          <div class="timing__arrow">&#x2192;</div>
-          <div class="timing__step-card glass-card">
-            <div class="timing__step-num">3</div>
-            <h4>必然の値上げ</h4>
-            <p>長期間同じ会社を使い続けると、知らない間に単価が上がっているケースが非常に多いです。</p>
-          </div>
-        </div>
-        <div class="timing__compare reveal">
-          <div class="timing__compare-bad">
-            <span class="timing__compare-emoji">&#x1F630;</span>
-            <h4>5年以上同じ会社</h4>
-            <p>単価が50%以上高くなっている可能性大</p>
-          </div>
-          <div class="timing__compare-vs">VS</div>
-          <div class="timing__compare-good">
-            <span class="timing__compare-emoji">&#x1F60A;</span>
-            <h4>切替1〜2年以内</h4>
-            <p>適正価格でガス代を大幅に抑えられる</p>
-          </div>
-        </div>
-        <div class="timing__conclusion reveal">
-          <p><strong>今切り替えるのが最も賢い選択です</strong></p>
         </div>
       </div>
     </section>
