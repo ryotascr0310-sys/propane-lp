@@ -3208,28 +3208,102 @@ input, select, textarea {
   box-shadow: 0 4px 16px rgba(212,168,83,0.3);
 }
 
+/* Alert - 危険を圧倒的に強調 */
+.timing-premium__alert {
+  margin: 48px auto;
+  max-width: 720px;
+}
+
+.timing-premium__alert-inner {
+  position: relative;
+  background: linear-gradient(135deg, #1a0000, #2d0a0a, #1a0000);
+  border: 2px solid #DC2626;
+  border-radius: 16px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 0 40px rgba(220, 38, 38, 0.25), 0 0 80px rgba(220, 38, 38, 0.1), inset 0 1px 0 rgba(255,255,255,0.05);
+  animation: alertPulse 3s ease-in-out infinite;
+}
+
+@keyframes alertPulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.25), 0 0 80px rgba(220, 38, 38, 0.1); border-color: #DC2626; }
+  50% { box-shadow: 0 0 60px rgba(220, 38, 38, 0.4), 0 0 120px rgba(220, 38, 38, 0.2); border-color: #EF4444; }
+}
+
+.timing-premium__alert-inner::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #DC2626, transparent, #DC2626);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.timing-premium__alert-icon {
+  flex-shrink: 0;
+  animation: alertIconBounce 2s ease-in-out infinite;
+}
+
+@keyframes alertIconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.timing-premium__alert-text {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #FCA5A5;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.timing-premium__alert-text strong {
+  color: #FEF08A;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(254, 240, 138, 0.4);
+  text-underline-offset: 4px;
+}
+
+/* Danger/Safe icons */
+.timing-premium__danger-icon,
+.timing-premium__safe-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
 /* Conclusion */
 .timing-premium__conclusion {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  max-width: 520px;
-  margin: 0 auto;
+  gap: 16px;
+  max-width: 680px;
+  margin: 48px auto 0;
+  text-align: center;
 }
 
 .timing-premium__conclusion-line {
-  flex: 1;
+  width: 80px;
   height: 1px;
   background: linear-gradient(90deg, transparent, #D4A853, transparent);
 }
 
 .timing-premium__conclusion p {
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #0C1929;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+.timing-premium__conclusion p strong {
+  color: #D4A853;
+  font-weight: 700;
+  font-size: 1.15rem;
 }
 
 /* CTA button in timing */
@@ -3285,6 +3359,17 @@ input, select, textarea {
     font-size: 0.9rem;
     white-space: normal;
     text-align: center;
+  }
+
+  .timing-premium__alert-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .timing-premium__alert-text {
+    font-size: 0.95rem;
   }
 }
 
